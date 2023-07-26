@@ -1,0 +1,50 @@
+@import './pop-up.scss';
+@import './activeTable.scss';
+@import './countTable.scss';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.table-scroll {
+  width: 100%;
+  overflow: auto;
+}
+
+table,
+th,
+td {
+  border: none;
+  border-spacing: 0px;
+}
+
+.btn {
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+.fa-solid {
+    font-size: 1rem;
+}
+
+.create-btn { 
+    margin-left: 2rem;
+    cursor: pointer;
+}
+
+.d-none {
+  display: none;
+}

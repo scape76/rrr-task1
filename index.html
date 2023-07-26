@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/c544fe69d4.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="table-scroll">
+        <table class="active">
+          <thead>
+            <tr class="active__title">
+              <th>Name</th>
+              <th>Created</th>
+              <th>Category</th>
+              <th>Content</th>
+              <th>Dates</th>
+              <th>
+                <button class="title__arch-btn btn">
+                  <i class="fa-solid fa-box-archive"></i>
+                </button>
+                <button class="title__del-btn btn">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </th>
+            </tr>
+          </thead>
+          <tbody class="active-body"></tbody>
+        </table>
+      </div>
+      <button class="create-btn">Create note</button>
+      <div class="table-scroll">
+        <table class="count">
+          <thead>
+            <tr class="count__title">
+              <th>Note Category</th>
+              <th>Active</th>
+              <td>Archived</td>
+            </tr>
+          </thead>
+          <tbody class="count-body"></tbody>
+        </table>
+      </div>
+      <div class="pop-up">
+        <button class="exit-btn"><div class="exit-btn__icon"></div></button>
+        <input class="pop-up__name" type="text" placeholder="name" />
+        <select name="categories" id="categories" selected="task">
+          <option value="task">Task</option>
+          <option value="thought">Random thought</option>
+          <option value="idea">Idea</option>
+        </select>
+        <textarea
+          class="pop-up__comment"
+          type="comment"
+          placeholder="Add Comments"
+        ></textarea>
+        <button class="save-btn">Save</button>
+      </div>
+
+      <script src="src/scripts/index.js" type="module"></script>
+    </div>
+  </body>
+</html>
