@@ -43,15 +43,12 @@ const handleEditItem = (id) => {
       : { ...el, isEditing: false };
   });
 
-  console.log(storage.active);
-
   renderListItems();
   setListenersOnBtns();
 };
 
 const handleSaveItem = (id) => {
   const input = document.querySelector(`.editable-${id}`);
-  console.log(input)
   const content = input.value;
 
   storage.active = storage.active.map((el) => {
@@ -102,7 +99,6 @@ function setListenersOnBtns() {
 
   for (let btn of elemEditButtons) {
     const id = btn.dataset.id;
-    console.log(btn);
     btn.addEventListener("click", () => handleEditItem(id));
   }
 
@@ -110,11 +106,9 @@ function setListenersOnBtns() {
     ".active__item__button-save"
   );
 
-  console.log(elemSaveButtons);
 
   for (let btn of elemSaveButtons) {
     const id = btn.dataset.id;
-    console.log(btn);
     btn.addEventListener("click", () => handleSaveItem(id));
   }
 }
